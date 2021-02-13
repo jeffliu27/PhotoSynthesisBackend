@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>Upload Form Page</h1>
+{% endblock %}
+
+{% block content %}
+<form id="imageForm">
+	<input type="file" name="uploadfiles[]" class="uploadfile" multiple>
+	<input type="text" name="basePhotoIndex" class="basePhoto">
+	<input type="submit" value="Upload">
+</form>
+
+<h1>Base Photo:</h1>
+<img id="baseImageContainer" src="" height="500px"/>
+<script src="{{ url_for('static', filename='js/uploadForm.js')}}"></script>
+{% endblock %}
